@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstore API</title>
+    <style>
+      body { font-family: Georgia, serif; margin: 2rem auto; max-width: 42rem; line-height: 1.5; color: #1d2a33; }
+      code { font-family: ui-monospace, monospace; }
+    </style>
+  </head>
+  <body>
+    <h1>Bookstore API</h1>
+    <p>Este sitio publica solo las funciones de Netlify. El frontend se sirve aparte.</p>
+    <p>Cola: <code>bookstore</code>. Variables: <code>CLOUDAMQP_URL</code>, <code>DATABASE_URL</code> y <code>FUNCTIONS_BASE_URL</code>.</p>
+    <h2>Lectura</h2>
+    <ul>
+      <li><code>GET /.netlify/functions/books</code></li>
+      <li><code>GET /.netlify/functions/authors</code></li>
+      <li><code>GET /.netlify/functions/publishers</code></li>
+    </ul>
+    <h2>Encolar</h2>
+    <ul>
+      <li><code>PUT /.netlify/functions/bookUpdate/:id</code></li>
+      <li><code>POST /.netlify/functions/bookInsert</code></li>
+      <li><code>DELETE /.netlify/functions/bookDelete/:id</code></li>
+      <li><code>PUT /.netlify/functions/authorUpdate/:id</code></li>
+      <li><code>POST /.netlify/functions/authorInsert</code></li>
+      <li><code>DELETE /.netlify/functions/authorDelete/:id</code></li>
+      <li><code>PUT /.netlify/functions/publisherUpdate/:id</code></li>
+      <li><code>POST /.netlify/functions/publisherInsert</code></li>
+      <li><code>DELETE /.netlify/functions/publisherDelete/:id</code></li>
+    </ul>
+    <h2>Procesar la cola</h2>
+    <ul>
+      <li><code>GET /.netlify/functions/bookTasks</code></li>
+      <li><code>GET /.netlify/functions/authorTasks</code></li>
+      <li><code>GET /.netlify/functions/publisherTasks</code></li>
+    </ul>
+  </body>
+</html>

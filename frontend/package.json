@@ -1,0 +1,17 @@
+{
+  "name": "bookstore-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --port 5050"
+  },
+  "dependencies": {
+    "vue": "^3.5.40"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^8.1.5"
+  }
+}

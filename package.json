@@ -1,0 +1,18 @@
+{
+  "name": "tarea-4-bookstore",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deferred bookstore updates with RabbitMQ and Netlify Functions",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "dev:api": "node scripts/dev-api.js",
+    "dev:web": "npm --prefix frontend run dev"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "0.10.4",
+    "amqplib": "2.0.1"
+  }
+}

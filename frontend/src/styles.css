@@ -1,0 +1,75 @@
+:root {
+  color: #1d2a33;
+  background: #f4f7f8;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+header, main { width: min(1080px, calc(100% - 2rem)); margin: 0 auto; }
+
+header { padding: 1.5rem 0 0.5rem; }
+
+h1, h2 { font-family: Georgia, serif; font-weight: 600; }
+
+.tabs { display: flex; gap: 0.5rem; margin: 1rem 0; }
+
+.tabs button, .actions button {
+  border: 0;
+  border-radius: 4px;
+  height: 38px;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: #fff;
+  background: #607d8b;
+}
+
+.tabs button.active, .actions button.primary { background: #1f6f8b; }
+
+.actions button.danger { background: #b0413e; }
+
+.actions button:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 1rem; padding-bottom: 2rem; }
+
+.panel { background: #fff; border: 1px solid #d5dee3; border-radius: 8px; padding: 1rem; }
+
+.list { list-style: none; margin: 0; padding: 0; }
+
+.list button {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: #1d2a33;
+  border: 0;
+  border-bottom: 1px solid #e6ecef;
+  padding: 0.75rem 0.25rem;
+  cursor: pointer;
+}
+
+.list button.selected { background: #e7f4f8; }
+
+label { display: block; margin-top: 0.75rem; font-size: 0.9rem; }
+
+input, textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #c5d0d6;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+
+.status { min-height: 1.4rem; margin-top: 0.8rem; }
+
+.hint { color: #52636c; }
+
+@media (max-width: 800px) {
+  .layout, .grid { grid-template-columns: 1fr; }
+}
