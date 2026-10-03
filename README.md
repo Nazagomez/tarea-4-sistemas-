@@ -2,6 +2,12 @@
 
 Las operaciones de libros, autores y editoriales no escriben la base de datos de inmediato. Cada alta, cambio o baja publica un JSON en la cola `bookstore`. Una función de tareas lee esa cola e invoca la función batch que sí modifica PostgreSQL.
 
+## Sitios publicados
+
+- Frontend: https://nazagomez.github.io/tarea-4-sistemas-/
+- Backend: https://magnificent-brigadeiros-768621.netlify.app/
+- Código: https://github.com/Nazagomez/tarea-4-sistemas-
+
 ## 1. CloudAMQP
 
 1. Cree una cuenta en [CloudAMQP](https://www.cloudamqp.com/) y una instancia del plan gratuito Little Lemur.
@@ -21,7 +27,7 @@ En Netlify, solo para este backend:
 
 - `CLOUDAMQP_URL`: el AMQP URL de CloudAMQP
 - `DATABASE_URL`: la conexión PostgreSQL
-- `FUNCTIONS_BASE_URL`: `https://SU-SITIO.netlify.app/.netlify/functions/`
+- `FUNCTIONS_BASE_URL`: `https://magnificent-brigadeiros-768621.netlify.app/.netlify/functions/`
 
 ## 4. Publicar
 
@@ -30,7 +36,7 @@ El backend se publica en Netlify desde esta carpeta (`netlify.toml` ya apunta a 
 ```bash
 cd frontend
 npm install
-VITE_API_BASE=https://SU-SITIO.netlify.app npm run build
+VITE_API_BASE=https://magnificent-brigadeiros-768621.netlify.app npm run build
 ```
 
 Publique el contenido de `frontend/dist` en GitHub Pages, Vercel u otro hosting estático.
@@ -39,7 +45,7 @@ Publique el contenido de `frontend/dist` en GitHub Pages, Vercel u otro hosting 
 
 1. En el frontend, abra un libro, cambie el título y pulse **Guardar en cola**. La lista todavía muestra el título anterior.
 2. En RabbitMQ Manager, abra la cola `bookstore` y confirme el mensaje `UPDATE`.
-3. Abra `https://SU-SITIO.netlify.app/.netlify/functions/bookTasks`.
+3. Abra `https://magnificent-brigadeiros-768621.netlify.app/.netlify/functions/bookTasks`.
 4. Recargue el frontend. El título nuevo debe venir de la base de datos.
 
 Autores y editoriales se prueban igual, invocando `authorTasks` y `publisherTasks`.
